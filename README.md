@@ -1,27 +1,11 @@
 # Final Project for COP 1000
 
-You'll have two weeks to complete this project. The first week will be spent scoping out your project with the help of your classmates and instructor. Your second week will be spent coding your project. More details are provided below.
-
-## About The Final Project Repository
-
-The final project repository housed [here](https://github.com/valencia-cop1000-201620/final-project/) will maintain conversations about the project. Additionally, you'll fork and clone the class repository to your **personal** GitHub account. This is where you'll create your files and you'll submit them for grading via a pull request, as we've done in past projects.
 
 ## Part 1
 
-Your goals for Part 1 of the final project should be:
-* narrow down the topic of your final project
-* create a proposal for your final project
-* solicit feedback from classmates
-* get final approval :+1: from instructor
 * provide feedback to classmates on their proposal
 * create a rough design of your final project
 
-### :bangbang: Deliverables for Part 1
- To achieve your Part 1 goals, complete the following for credit:
-
-:ballot_box_with_check: Create an [Issue](https://github.com/valencia-cop1000-201620/final-project/issues/new) with your project proposal.
-  * The **Issue** will automatically populate with some fields for you to fill in. Answer the questions that autopopulate.
-  * Feel free to add comments about what you'd like some feedback from classmates or the professor on.
 
 :ballot_box_with_check: Provide feedback to **Issues** opened by your classmates. **You need to provide feedback to at least 3 classmates for credit.** Some useful feedback would be:
   * does the project seem like too much work to be done in 1 week? If not, how could you suggest the project be modified so it fits into the given timeframe?
@@ -34,28 +18,8 @@ Your goals for Part 1 of the final project should be:
 
 ## Part 2
 
-Your goals for Part 2 of the final project should be:
-* finalize your design from Week 1
-* implement your final project (this is the coding portion!)
 * solicit feedback from classmates
 * provide feedback to classmates
-
-### :bangbang: Deliverables for Part 2
- To achieve your part 2 goals, complete the following for credit:
-
-:ballot_box_with_check: Fork this project to your personal GitHub account.
-
-:ballot_box_with_check: Clone the `final-project` repository from your own fork. This will download a copy of the repo to your computer so you can begin adding files. Just like we've done in previous projects.
-
-:ballot_box_with_check: Formalize the design you discussed in Week 1 by adding one or more files to the `design` folder. These files can be outlines, diagrams, written descriptions of programming structure, pseudocode, or anything that helps you plan out **BEFORE** you begin coding.
-
-:ballot_box_with_check: Add your python program to the `devel` folder.
-
-:ballot_box_with_check: Update the `README.md` file to your `devel` folder explaining, in detail, how to run your program. Instructions are in the starter file I placed in the `devel` folder.
-
-:ballot_box_with_check: Once finished, commit any final changes like you've done for previous projects, and sync your changes up to GitHub.
-
-:ballot_box_with_check: Create a pull request to turn in this assignment. In your pull request, include questions you'd like your classmates to give you feedback on.
 
 :ballot_box_with_check: Give feedback to your classmates via the [open pull requests page](https://github.com/valencia-cop1000-201620/final-project/pulls). **You need to provide feedback to at least 3 classmates for credit.** Some useful feedback would be:
   * Does the classmate's project run on your computer? Don't be afraid to ask for help if it doesn't, this is a learning experience for both you and the other student.

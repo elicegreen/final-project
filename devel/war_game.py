@@ -1,4 +1,5 @@
-import random
+#use this to review my code
+import random, time
 
 #creates and shuffles a full deck of cards; returns it as a list
 def deckGenerator():
@@ -9,8 +10,10 @@ def deckGenerator():
 #divides deck of cards evenly between the player and computer; returns them as two lists
 def cardDealer(deck):
     print('Shuffling the deck.........')
+    time.sleep(2)
     random.shuffle(deck)
     print('Dealing the cards..........')
+    time.sleep(2)
     playerCards = deck[:26]
     computerCards = deck[26:]
     return(playerCards, computerCards)
@@ -31,27 +34,32 @@ def mainGame(playerCards, computerCards):
         print(' ')
         print('I have ', len(computerCards), ' cards')
         print(' ')
-        key = input('Press any key to flip your card')
+        enter = input('Press enter to flip your card')
         playerHand = playerCards[0]
         del playerCards[0] #removes the flipped card from the player's deck (deletes first value in the player list)
         computerHand = computerCards[0]
         del computerCards[0] #removes theflipped card from the computer's deck (deletes first value in the computer list) 
         print(' ')
         print(playerName + ', ' + 'your card is........')
+        time.sleep(1)
         print(playerHand)
         print('My card is........')
+        time.sleep(1)
         print(computerHand)
+        time.sleep(1)
 
         #compares between flipped cards using the dictionary as ref and adds cards to the end of either the player
         #or the computer lists (according to compared value)
         if dict.get(playerHand)>dict.get(computerHand):
             print(' ')
             print('You get the cards!')
+            time.sleep(1)
             playerCards.append(playerHand)
             playerCards.append(computerHand)
         elif dict.get(playerHand)<dict.get(computerHand):
             print(' ')
             print('I get the cards!')
+            time.sleep(1)
             computerCards.append(playerHand)
             computerCards.append(computerHand)
         #enters this condition in case of 'war' (if both cards that were flipped are the same)
@@ -65,16 +73,18 @@ def mainGame(playerCards, computerCards):
             while war == True:
                 print(' ')
                 print('It is a tie! War time!!!')
+                time.sleep(1)
                 while playerNewHand == 0:
                     tempPlayerPile.append(playerHand) #adds the flipped card as the first card in the player war cared pile
                     tempComputerPile.append(computerHand) #adds the flipped card as the first card in the computer war cared pile         
                     playerNewHand = 1 #assures that this loop doesn't run again for war that is second or more times in a row
 
                 print(' ')
-                key = input('Press any key to place three cards on top of your flipped card')
+                enter = input('Press enter to place three cards on top of your flipped card')
                 tempPlayerPile.extend(playerCards[0:3])#adds the three next cards from player cards to player war card pile
                 print(' ')
                 print('I am placing three cards on top of my flipped card...')
+                time.sleep(2)
                 tempComputerPile.extend(computerCards[0:3])#adds the three next cards from computer cards to computer war card pile
 
                 del playerCards[0:3] #removes four first cards from player's deck (as they have been placed/stored in player war card pile)
@@ -82,18 +92,21 @@ def mainGame(playerCards, computerCards):
 
                 print(' ')
                 print(' ')
-                key = input('Press any key to flip the top card in your war pile')
+                enter = input('Press enter to flip the top card in your war pile')
                 playerNewHand = tempPlayerPile[-1] #stores last card in player war pile list for value comparison
                 print(' ')
                 print(' ')
                 print(' ')
                 print(playerName + ', ' + 'your card is........')
+                time.sleep(1)
                 print(playerNewHand)
                 print(' ')
                 print('I am flipping the top card in my war pile...')
+                time.sleep(1)
                 computerNewHand = tempComputerPile[-1] #stores last card in computer war pile list for value comparison
                 print(' ')
                 print('My card is........')
+                time.sleep(1)
                 print(computerNewHand)
                 #compares between the player's and the computer's last cards placed in war piles ("flipped cards")
                 #will add both war piles (all values in both lists) to either the player or computer cards according to value comparison and exit war [while] loop
@@ -101,12 +114,14 @@ def mainGame(playerCards, computerCards):
                 if dict.get(playerNewHand)>dict.get(computerNewHand):
                     print(' ')
                     print('You get the cards!')
+                    time.sleep(1)
                     playerCards.extend(tempPlayerPile) 
                     playerCards.extend(tempComputerPile) #extend method adds all values of one list to another
                     war = False
                 elif dict.get(playerNewHand)<dict.get(computerNewHand):
                     print(' ')
                     print('I get the cards!')
+                    time.sleep(1)
                     computerCards.extend(tempPlayerPile) #adds all four drawn cards to the coputer's deck
                     computerCards.extend(tempComputerPile) #adds all four drawn cards to the coputer's deck
                     war = False

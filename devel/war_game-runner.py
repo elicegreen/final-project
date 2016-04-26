@@ -1,3 +1,5 @@
+#use this to run the game
+
 import war_game
 
 print('Hi! Welcome to the card game war!')
